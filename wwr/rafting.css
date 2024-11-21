@@ -1,16 +1,16 @@
-/* Defining CSS Variables in the :root pseudo-class */
+/* Define CSS Variables in the :root pseudo-class */
 :root {
-    --primary-color: #3498db; /* Example primary color */
-    --secondary-color: #2ecc71;  /* Example secondary color */
-    --accent-color: #f1c40f;  /* Example accent color */
-    --background-color: #f4f4f4; /* Example background color */
-    --text-color: #333; /* Example text color */
+    --primary-color: #007BFF; /* Primary color for main elements */
+    --secondary-color: #333;  /* Color for secondary text */
+    --accent-color: #FF5733;  /* Accent color for highlights */
+    --background-color: #f4f4f4; /* Background color for the body */
+    --text-color: #333; /* Main text color */
     --hero-bg-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for the hero article */
 }
 
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif; /* Use the primary font */
     background-color: var(--background-color);
     color: var(--text-color);
     max-width: 1200px; /* Limit the width of the page */
@@ -48,7 +48,8 @@ p {
 
 /* Remove underlines from social media image links only */
 .social-media a {
-    text-decoration: none;}
+    text-decoration: none; /* Remove underline from social media links */
+}
 
 /* General hyperlink styles */
 a {
@@ -83,11 +84,31 @@ a:hover {
     z-index: 2; /* Ensure it's above the hero image */
 }
 
-.hero article img {
+.hero article img.client-image {
     float: right; /* Float the image to the right of the paragraph */
     margin-left: 15px; /* Add some space between the image and text */
 }
 
 .hero article p {
     color: white; /* Change paragraph color for contrast */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center; /* Center the footer content */
+    padding: 20px 0; /* Add padding to the footer */
+    background-color: var(--background-color); /* Use the same background color */
+}
+
+footer p {
+    margin: 10px 0; /* Margin for spacing */
+}
+
+footer a {
+    margin: 0 10px; /* Spacing between social media icons */
+}
+
+footer img {
+    width: 30px; /* Set a size for social media icons */
+    height: auto; /* Maintain aspect ratio */
 }
