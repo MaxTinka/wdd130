@@ -1,0 +1,93 @@
+/* Defining CSS Variables in the :root pseudo-class */
+:root {
+    --primary-color: #3498db; /* Example primary color */
+    --secondary-color: #2ecc71;  /* Example secondary color */
+    --accent-color: #f1c40f;  /* Example accent color */
+    --background-color: #f4f4f4; /* Example background color */
+    --text-color: #333; /* Example text color */
+    --hero-bg-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for the hero article */
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    max-width: 1200px; /* Limit the width of the page */
+    margin: 0 auto; /* Center the page */
+    padding: 20px; /* Add some padding */
+}
+
+/* Heading Styles */
+h1 {
+    color: var(--primary-color);
+    font-size: 2.5em;
+    position: absolute; /* Position absolutely within the hero */
+    top: 20px; /* Adjust top position */
+    left: 20px; /* Adjust left position */
+    z-index: 2; /* Ensure it's above other elements */
+}
+
+h2 {
+    color: var(--secondary-color);
+    font-size: 2em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    color: var(--accent-color);
+}
+
+/* Paragraph Styles */
+p {
+    color: var(--text-color);
+    line-height: 1.6;
+    margin-bottom: 15px; /* Add spacing between paragraphs */
+}
+
+/* Remove underlines from social media image links only */
+.social-media a {
+    text-decoration: none;}
+
+/* General hyperlink styles */
+a {
+    color: var(--primary-color); /* Set a color for standard links */
+    text-decoration: underline; /* Keep underline for standard links */
+}
+
+a:hover {
+    text-decoration: underline; /* Maintain underline on hover for standard links */
+}
+
+/* Hero Container Styles */
+.hero {
+    position: relative; /* Position relative for absolute positioning of children */
+    height: 400px; /* Set a height for the hero section */
+    overflow: hidden; /* Ensure content does not overflow */
+}
+
+.hero img.hero-image {
+    width: 100%; /* Make the hero image fill the width of the container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure it's treated as a block element */
+}
+
+.hero article {
+    position: absolute; /* Position the article absolutely */
+    top: 100px; /* Adjust top position as needed */
+    left: 20px; /* Adjust left position as needed */
+    background-color: var(--hero-bg-color); /* Background color with opacity */
+    padding: 20px; /* Padding for the article */
+    border-radius: 5px; /* Optional: rounded corners */
+    z-index: 2; /* Ensure it's above the hero image */
+}
+
+.hero article img {
+    float: right; /* Float the image to the right of the paragraph */
+    margin-left: 15px; /* Add some space between the image and text */
+}
+
+.hero article p {
+    color: white; /* Change paragraph color for contrast */
+}
