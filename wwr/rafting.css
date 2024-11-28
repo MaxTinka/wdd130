@@ -1,112 +1,132 @@
-/* Define CSS Variables in the :root pseudo-class */
+/* Define CSS Variables */
 :root {
-    --primary-color: #007BFF; /* Primary color for main elements */
-    --secondary-color: #333;  /* Color for secondary text */
-    --accent-color: #FF5733;  /* Accent color for highlights */
-    --background-color: #f4f4f4; /* Background color for the body */
-    --text-color: #333; /* Main text color */
-    --hero-bg-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for the hero article */
+    --primary-color: #007BFF; /* Primary color for headers and links */
+    --secondary-color: #FF5733; /* Secondary color for accents */
+    --background-color: #F8F9FA; /* Background color for the body */
+    --text-color: #343A40; /* Main text color */
+    --heading-color: #212529; /* Color for headings */
+    --link-color: #007BFF; /* Color for links */
+    --link-hover-color: #0056b3; /* Hover color for links */
 }
 
+/* Global Styles */
 body {
-    font-family: 'Roboto', sans-serif; /* Use the primary font */
+    font-family: 'Roboto', sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
-    max-width: 1200px; /* Limit the width of the page */
-    margin: 0 auto; /* Center the page */
-    padding: 20px; /* Add some padding */
+    margin: 0;
+    padding: 0;
 }
 
-h1 {
-    color: var(--primary-color);
-    font-size: 2.5em;
-    position: absolute; /* Position absolutely within the hero */
-    top: 20px; /* Adjust top position */
-    left: 20px; /* Adjust left position */
-    z-index: 2; /* Ensure it's above other elements */
+/* Container to Limit Width */
+.container {
+    max-width: 1200px; /* Set a maximum width for the content */
+    margin: 0 auto; /* Center the container */
+    padding: 0 20px; /* Add some horizontal padding */
 }
 
-h2 {
-    color: var(--secondary-color);
-    font-size: 2em;
-    margin-top: 20px;
-    margin-bottom: 10px;
+/* Header Styles */
+header {
+    background-color: var(--primary-color);
+    padding: 20px;
+    text-align: center;
 }
 
-h3 {
-    color: var(--accent-color);
+/* Logo Styles */
+.logo img {
+    max-width: 100%;
+    height: auto;
 }
 
-/* Paragraph Styles */
-p {
-    color: var(--text-color);
-    line-height: 1.6;
-    margin-bottom: 15px; /* Add spacing between paragraphs */
+/* Navigation Styles */
+nav {
+    background-color: var(--primary-color); /* Background color for the nav */
 }
 
-/* Remove underlines from social media image links only */
-.social-media a {
-    text-decoration: none; /* Remove underline from social media links */
+nav ul {
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: flex-end; /* Align items to the right */
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
 }
 
-/* General hyperlink styles */
-a {
-    color: var(--primary-color); /* Set a color for standard links */
-    text-decoration: underline; /* Keep underline for standard links */
+nav ul li {
+    margin-left: 20px; /* Space between items */
 }
 
-a:hover {
-    text-decoration: underline; /* Maintain underline on hover for standard links */
+nav ul li a {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
+    padding: 10px; /* Add padding for clickable area */
 }
 
-/* Hero Container Styles */
+nav ul li a:hover {
+    background-color: var(--link-hover-color); /* Change background on hover */
+}
+
+/* Hero Section Styles */
 .hero {
-    position: relative; /* Position relative for absolute positioning of children */
-    height: 400px; /* Set a height for the hero section */
-    overflow: hidden; /* Ensure content does not overflow */
+    position: relative; /* Set position relative for absolute positioning of child elements */
+    height: 300px; /* Adjust height as needed */
+    overflow: hidden; /* Hide overflow */
 }
 
-.hero img.hero-image {
+.hero img {
     width: 100%; /* Make the hero image fill the width of the container */
     height: auto; /* Maintain aspect ratio */
-    display: block; /* Ensure it's treated as a block element */
+    display: block; /* Ensure the image is a block element */
 }
 
+/* Positioning the Heading */
+.hero h1 {
+    position: absolute; /* Position absolutely within the hero */
+    top: 20%; /* Adjust as needed */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center the heading */
+    color: white; /* Text color for the heading */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Shadow for better readability */
+    font-size: 3em; /* Adjust size as needed */
+}
+
+/* Article Styles */
 .hero article {
-    position: absolute; /* Position the article absolutely */
-    top: 100px; /* Adjust top position as needed */
-    left: 20px; /* Adjust left position as needed */
-    background-color: var(--hero-bg-color); /* Background color with opacity */
+    position: absolute; /* Position absolutely within the hero */
+    bottom: 20px; /* Position from the bottom */
+    left: 20px; /* Position from the left */
+    right: 20px; /* Position from the right */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
     padding: 20px; /* Padding for the article */
-    border-radius: 5px; /* Optional: rounded corners */
-    z-index: 2; /* Ensure it's above the hero image */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
 
-.hero article img.client-image {
-    float: right; /* Float the image to the right of the paragraph */
-    margin-left: 15px; /* Add some space between the image and text */
-}
-
+/* Article Text Styles */
 .hero article p {
-    color: white; /* Change paragraph color for contrast */
+    margin: 0; /* Reset margin */
+    line-height: 1.6; /* Improved line spacing */
+    color: var(--text-color); /* Paragraph text color */
+}
+
+/* Image Styles */
+img {
+    max-width: 100%; /* Responsive images */
+    height: auto;
+}
+
+/* Social Media Link Styles */
+footer a img {
+    text-decoration: none; /* Remove underline from social media image links */
 }
 
 /* Footer Styles */
 footer {
-    text-align: center; /* Center the footer content */
-    padding: 20px 0; /* Add padding to the footer */
-    background-color: var(--background-color); /* Use the same background color */
-}
-
-footer p {
-    margin: 10px 0; /* Margin for spacing */
-}
-
-footer a {
-    margin: 0 10px; /* Spacing between social media icons */
+    text-align: center;
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: white;
 }
 
 footer img {
-    width: 30px; /* Set a size for social media icons */
-    height: auto; /* Maintain aspect ratio */
+    margin: 0 10px; /* Space between social media icons */
 }
