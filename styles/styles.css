@@ -1,57 +1,60 @@
-main{
+main {
   max-width: 840px;
 }
-aside{
+
+aside {
   width: 300px;
   margin: 20px;
-  border: 1px solid rgba(o,o,o,o.2);
+  border: 1px solid rgba(0, 0, 0, 0.2); /* Corrected rgba syntax */
   padding: 15px;
   background-color: #eee;
   color: #333;
   text-align: center;
 }
-aside img{
+
+aside img {
   width: 200px;
-  height:auto;
-}
-main img{
- width: 150px;
- height: auto; 
+  height: auto;
 }
 
-p{
-  padding: 0;
+main img {
+  width: 200px; /* Adjusted to match your HTML */
+  height: auto; 
 }
-footer{
- margin-top: 20px;
- border-top: 1px solid #000; 
- text-align: center;
+
+p {
+  padding: 0; /* First p selector */
 }
+
+footer {
+  margin-top: 20px;
+  border-top: 1px solid #000; 
+  text-align: center;
+}
+
 nav {
-    background-color: darkblue;
-    padding: 10px;
-  }
-  nav a {
-    color: white;
-    display: block;
-    padding: 20px;
-  }
-  
-  h1 {
-    color: darkblue;
-  }
-  h1 {
-    color: darkblue;
-  }
-  
-  img {
-    width: 150px;
-    height: auto;
-    border: 1px solid black;
-    padding: 2px;
-    box-shadow: 0 0 30px gray;
-  }
-  p{
-    padding: 10x;
-  }
-  
+  background-color: darkblue;
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  display: block;
+  padding: 20px;
+}
+
+h1 {
+  color: darkblue;
+}
+
+img {
+  width: 150px;
+  height: auto;
+  border: 1px solid black;
+  padding: 2px;
+  box-shadow: 0 0 30px gray;
+}
+
+p {
+  padding: 10px; /* Corrected from 10x to 10px */
+}
