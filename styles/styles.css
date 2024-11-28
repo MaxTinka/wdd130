@@ -1,60 +1,72 @@
+/* Main container */
 main {
   max-width: 840px;
 }
 
+/* Aside section */
 aside {
   width: 300px;
   margin: 20px;
-  border: 1px solid rgba(0, 0, 0, 0.2); /* Corrected rgba syntax */
+  border: 1px solid rgba(0, 0, 0, 0.2);
   padding: 15px;
   background-color: #eee;
   color: #333;
   text-align: center;
 }
 
+aside h2{
+  margin: 10px 0;
+}
+
+/* Image styles within aside */
 aside img {
   width: 200px;
   height: auto;
 }
 
+/* Image styles within main */
 main img {
-  width: 200px; /* Adjusted to match your HTML */
-  height: auto; 
+  width: 200px;
+  height: auto;
+  float: right;
+  margin-left: 20px;
 }
 
+/* Paragraph styles */
 p {
-  padding: 0; /* First p selector */
+  padding: 10px; /* Consolidated padding for paragraphs */
 }
 
+/* Footer styles */
 footer {
   margin-top: 20px;
-  border-top: 1px solid #000; 
+  border-top: 1px solid #000;
   text-align: center;
 }
 
+/* Navigation styles */
 nav {
   background-color: darkblue;
   padding: 10px;
 }
 
+/* Navigation link styles */
 nav a {
   color: white;
   display: block;
   padding: 20px;
 }
 
+/* Heading styles */
 h1 {
   color: darkblue;
 }
 
+/* General image styles */
 img {
   width: 150px;
   height: auto;
   border: 1px solid black;
   padding: 2px;
   box-shadow: 0 0 30px gray;
-}
-
-p {
-  padding: 10px; /* Corrected from 10x to 10px */
 }
