@@ -27,25 +27,38 @@ body {
 
 /* Header Styles */
 header {
+    display: grid; /* Use CSS Grid for header layout */
+    grid-template-columns: auto 1fr auto; /* Three columns: logo, title, navigation */
+    align-items: center; /* Center items vertically */
     background-color: var(--primary-color);
     padding: 20px;
-    text-align: center;
 }
 
 /* Logo Styles */
+.logo {
+    flex: 0 0 auto; /* Prevent the logo from growing */
+}
+
 .logo img {
     max-width: 100%;
     height: auto;
 }
 
+/* Title Styles */
+header h1 {
+    color: white; /* Title color */
+    margin: 0; /* Remove margin */
+    text-align: center; /* Center the title */
+}
+
 /* Navigation Styles */
 nav {
-    background-color: var(--primary-color); /* Background color for the nav */
+    display: flex; /* Use Flexbox for horizontal layout in nav */
+    justify-content: flex-end; /* Align items to the right */
 }
 
 nav ul {
     display: flex; /* Use flexbox for horizontal layout */
-    justify-content: flex-end; /* Align items to the right */
     list-style-type: none; /* Remove bullet points */
     padding: 0; /* Remove default padding */
     margin: 0; /* Remove default margin */
@@ -114,19 +127,74 @@ img {
     height: auto;
 }
 
-/* Social Media Link Styles */
-footer a img {
-    text-decoration: none; /* Remove underline from social media image links */
+/* Adventures Section Styles */
+.adventures {
+    padding: 40px 20px; /* Padding for the section */
+    background-color: var(--background -color); /* Background color for the section */
+    text-align: center; /* Center text */
+}
+
+.adventures h2 {
+    color: var(--heading-color); /* Heading color */
+    font-size: 2.5em; /* Size of the heading */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.adventures .adventure-item {
+    display: inline-block; /* Align items in a row */
+    width: calc(33.33% - 40px); /* Three items per row with spacing */
+    margin: 10px; /* Space around items */
+    background-color: white; /* Background for each item */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    overflow: hidden; /* Hide overflow */
+    transition: transform 0.3s; /* Smooth scaling on hover */
+}
+
+.adventures .adventure-item:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+.adventures .adventure-item img {
+    width: 100%; /* Make the image fill the item */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.adventures .adventure-item h3 {
+    color: var(--heading-color); /* Color for adventure titles */
+    margin: 10px 0; /* Space above and below titles */
+}
+
+.adventures .adventure-item p {
+    color: var(--text-color); /* Color for description text */
+    padding: 0 10px; /* Padding for description */
 }
 
 /* Footer Styles */
 footer {
-    text-align: center;
-    padding: 20px;
-    background-color: var(--primary-color);
-    color: white;
+    display: flex; /* Use Flexbox for layout */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center items vertically */
+    padding: 20px; /* Padding for footer */
+    background-color: var(--primary-color); /* Background color for footer */
+    color: white; /* Text color for footer */
 }
 
-footer img {
-    margin: 0 10px; /* Space between social media icons */
+/* Social Media Links Container */
+.footer-social {
+    display: flex; /* Use Flexbox for horizontal layout */
+    justify-content: flex-end; /* Align social icons to the right */
+}
+
+.footer-social a {
+    margin-left: 15px; /* Space between social icons */
+}
+
+.footer-social img {
+    width: 30px; /* Set a fixed width for social media icons */
+    height: auto; /* Maintain aspect ratio */
+}
+
+footer p{
+    margin: 0;
 }
