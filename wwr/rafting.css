@@ -130,7 +130,7 @@ img {
 /* Adventures Section Styles */
 .adventures {
     padding: 40px 20px; /* Padding for the section */
-    background-color: var(--background -color); /* Background color for the section */
+    background-color: var(--background-color); /* Background color for the section */
     text-align: center; /* Center text */
 }
 
