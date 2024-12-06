@@ -78,96 +78,103 @@ nav ul li a:hover {
     background-color: var(--link-hover-color); /* Change background on hover */
 }
 
-/* Hero Section Styles */
-.hero {
-    position: relative; /* Set position relative for absolute positioning of child elements */
-    height: 300px; /* Adjust height as needed */
-    overflow: hidden; /* Hide overflow */
-}
-
-.hero img {
-    width: 100%; /* Make the hero image fill the width of the container */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Ensure the image is a block element */
-}
-
-/* Positioning the Heading */
-.hero h1 {
-    position: absolute; /* Position absolutely within the hero */
-    top: 20%; /* Adjust as needed */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Center the heading */
-    color: white; /* Text color for the heading */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Shadow for better readability */
-    font-size: 3em; /* Adjust size as needed */
-}
-
-/* Article Styles */
-.hero article {
-    position: absolute; /* Position absolutely within the hero */
-    bottom: 20px; /* Position from the bottom */
-    left: 20px; /* Position from the left */
-    right: 20px; /* Position from the right */
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
-    padding: 20px; /* Padding for the article */
+/* Common Styles for Sections */
+.section {
+    background-color: white; /* White background for sections */
+    padding: 20px; /* Padding for sections */
     border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 20px; /* Space below sections */
 }
 
-/* Article Text Styles */
-.hero article p {
-    margin: 0; /* Reset margin */
-    line-height: 1.6; /* Improved line spacing */
-    color: var(--text-color); /* Paragraph text color */
+/* Company Information Styles */
+.company-info {
+    padding: 20px; /* Padding for the company info section */
 }
 
-/* Image Styles */
-img {
-    max-width: 100%; /* Responsive images */
-    height: auto;
-}
-
-/* Adventures Section Styles */
-.adventures {
-    padding: 40px 20px; /* Padding for the section */
-    background-color: var(--background-color); /* Background color for the section */
-    text-align: center; /* Center text */
-}
-
-.adventures h2 {
+.company-info h2 {
     color: var(--heading-color); /* Heading color */
-    font-size: 2.5em; /* Size of the heading */
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+/* Google Map Styles */
+.google-map {
+    margin-bottom: 20px; /* Space below the map */
+}
+
+.google-map iframe {
+    width: 100%; /* Full width */
+    height: 300px; /* Set height */
+    border: none; /* Remove border */
+}
+
+/* Employee Profiles Styles */
+.employee-profiles {
+    display: flex; /* Use Flexbox for layout */
+    justify-content: space-around; /* Space out employee profiles */
+    margin-bottom: 20px; /* Space below the section */
+}
+
+.employee-profile {
+    text-align: center; /* Center text */
+    width: 30%; /* Set width for each profile */
+}
+
+.employee-profile img {
+    border-radius: 50%; /* Circular images */
+    width: 100px; /* Fixed width for images */
+    height: 100px; /* Fixed height for images */
+}
+
+/* Contact Form Styles */
+.contact-form {
+    background-color: white; /* White background for the form */
+    padding: 20px; /* Padding for the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.contact-form h2 {
+    color: var(--heading-color); /* Heading color */
     margin-bottom: 20px; /* Space below the heading */
 }
 
-.adventures .adventure-item {
-    display: inline-block; /* Align items in a row */
-    width: calc(33.33% - 40px); /* Three items per row with spacing */
-    margin: 10px; /* Space around items */
-    background-color: white; /* Background for each item */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    overflow: hidden; /* Hide overflow */
-    transition: transform 0.3s; /* Smooth scaling on hover */
+.contact-form label {
+    display: block; /* Block display for labels */
+    margin-bottom: 5px; /* Space below labels */
+    color: var(--text-color); /* Text color for labels */
 }
 
-.adventures .adventure-item:hover {
-    transform: scale(1.05); /* Scale up on hover */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%; /* Full width inputs */
+    padding: 10px; /* Padding for inputs */
+    margin-bottom: 15px; /* Space below inputs */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners */
 }
 
-.adventures .adventure-item img {
-    width: 100%; /* Make the image fill the item */
-    height: auto; /* Maintain aspect ratio */
+.contact-form input[type="radio"] {
+    margin-right: 10px; /* Space between radio and label */
 }
 
-.adventures .adventure-item h3 {
-    color: var(--heading-color); /* Color for adventure titles */
-    margin: 10px 0; /* Space above and below titles */
+.contact-form .newsletter-checkbox {
+    margin-bottom: 15px; /* Space below checkbox */
 }
 
-.adventures .adventure-item p {
-    color: var(--text-color); /* Color for description text */
-    padding: 0 10px; /* Padding for description */
+.contact-form button {
+    background-color: var(--primary-color); /* Button background color */
+    color: white; /* Button text color */
+    padding: 10px 20px; /* Padding for button */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size for button */
+}
+
+.contact-form button:hover {
+    background-color: var(--link-hover-color); /* Change background on hover */
 }
 
 /* Footer Styles */
@@ -195,6 +202,6 @@ footer {
     height: auto; /* Maintain aspect ratio */
 }
 
-footer p{
-    margin: 0;
+footer p {
+    margin: 0; /* Reset margin for footer text */
 }
