@@ -28,7 +28,7 @@ body {
 /* Header Styles */
 header {
     display: grid; /* Use CSS Grid for header layout */
-    grid-template-columns: auto 1fr auto; /* Three columns: logo, title, navigation */
+    grid-template-columns: auto 1fr; /* Two columns: logo and navigation */
     align-items: center; /* Center items vertically */
     background-color: var(--primary-color);
     padding: 20px;
@@ -42,13 +42,6 @@ header {
 .logo img {
     max-width: 100%;
     height: auto;
-}
-
-/* Title Styles */
-header h1 {
-    color: white; /* Title color */
-    margin: 0; /* Remove margin */
-    text-align: center; /* Center the title */
 }
 
 /* Navigation Styles */
@@ -72,108 +65,108 @@ nav ul li a {
     color: white; /* Link color */
     text-decoration: none; /* Remove underline */
     padding: 10px; /* Add padding for clickable area */
+    transition: background-color 0.3s ease; /* Smooth transition */
 }
 
 nav ul li a:hover {
     background-color: var(--link-hover-color); /* Change background on hover */
 }
 
-/* Common Styles for Sections */
-.section {
-    background-color: white; /* White background for sections */
-    padding: 20px; /* Padding for sections */
+/* Hero Section Styles */
+.hero {
+    position: relative;
+    text-align: center;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.hero-text h1 {
+    font-size: 2.5em; /* Adjust font size for the heading */
+    margin: 0; /* Remove margin */
+}
+
+.hero-text p {
+    font-size: 1.2em; /* Adjust font size for the paragraph */
+}
+
+/* Trip Package Styles */
+.trip-descriptions {
+    margin: 20px 0; /* Space above and below the section */
+}
+
+.trip-package {
+    background-color: white; /* White background for each package */
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    margin-bottom: 20px; /* Space below sections */
-}
-
-/* Company Information Styles */
-.company-info {
-    padding: 20px; /* Padding for the company info section */
-}
-
-.company-info h2 {
-    color: var(--heading-color); /* Heading color */
-    margin-bottom: 10px; /* Space below the heading */
-}
-
-/* Google Map Styles */
-.google-map {
-    margin-bottom: 20px; /* Space below the map */
-}
-
-.google-map iframe {
-    width: 100%; /* Full width */
-    height: 300px; /* Set height */
-    border: none; /* Remove border */
-}
-
-/* Employee Profiles Styles */
-.employee-profiles {
-    display: flex; /* Use Flexbox for layout */
-    justify-content: space-around; /* Space out employee profiles */
-    margin-bottom: 20px; /* Space below the section */
-}
-
-.employee-profile {
+    padding: 20px; /* Padding for package */
+    margin-bottom: 20px; /* Space between packages */
     text-align: center; /* Center text */
-    width: 30%; /* Set width for each profile */
 }
 
-.employee-profile img {
-    border-radius: 50%; /* Circular images */
-    width: 100px; /* Fixed width for images */
-    height: 100px; /* Fixed height for images */
+.trip-package img {
+    width: 100%; /* Full width for images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for images */
 }
 
-/* Contact Form Styles */
-.contact-form {
-    background-color: white; /* White background for the form */
-    padding: 20px; /* Padding for the form */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+/* Trip Table Styles */
+.trip-table {
+    margin: 20px 0; /* Space above and below the table */
 }
 
-.contact-form h2 {
+.trip-table table {
+    width: 100%; /* Full width for the table */
+    border-collapse: collapse; /* Remove space between borders */
+}
+
+.trip-table th, .trip-table td {
+    border: 1px solid #ccc; /* Light border for table cells */
+    padding: 10px; /* Padding for table cells */
+    text-align: left; /* Align text to the left */
+}
+
+.trip-table th {
+    background-color: var(--primary-color); /* Header background color */
+    color: white; /* Header text color */
+}
+
+/* Call to Action Styles */
+.call-to-action {
+    text-align: center; /* Center text */
+    margin: 20px 0; /* Space above and below the section */
+}
+
+.call-to-action h2 {
     color: var(--heading-color); /* Heading color */
-    margin-bottom: 20px; /* Space below the heading */
 }
 
-.contact-form label {
-    display: block; /* Block display for labels */
-    margin-bottom: 5px; /* Space below labels */
-    color: var(--text-color); /* Text color for labels */
+.call-to-action p {
+    margin-bottom: 15px; /* Space below paragraph */
 }
 
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
-    width: 100%; /* Full width inputs */
-    padding: 10px; /* Padding for inputs */
-    margin-bottom: 15px; /* Space below inputs */
-    border: 1px solid #ccc; /* Light border */
-    border-radius: 4px; /* Rounded corners */
-}
-
-.contact-form input[type="radio"] {
-    margin-right: 10px; /* Space between radio and label */
-}
-
-.contact-form .newsletter-checkbox {
-    margin-bottom: 15px; /* Space below checkbox */
-}
-
-.contact-form button {
+.call-to-action .cta-button {
     background-color: var(--primary-color); /* Button background color */
     color: white; /* Button text color */
     padding: 10px 20px; /* Padding for button */
     border: none; /* Remove border */
     border-radius: 4px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    font-size: 16px; /* Font size for button */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make it a block element */
+    transition: background-color 0.3s ease; /* Smooth transition */
 }
 
-.contact-form button:hover {
+.call-to-action .cta-button:hover {
     background-color: var(--link-hover-color); /* Change background on hover */
 }
 
@@ -187,7 +180,6 @@ footer {
     color: white; /* Text color for footer */
 }
 
-/* Social Media Links Container */
 .footer-social {
     display: flex; /* Use Flexbox for horizontal layout */
     justify-content: flex-end; /* Align social icons to the right */
