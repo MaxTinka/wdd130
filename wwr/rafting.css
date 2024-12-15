@@ -1,12 +1,13 @@
 /* Define CSS Variables */
 :root {
-    --primary-color: #007BFF; /* Primary color for headers and links */
-    --secondary-color: #FF5733; /* Secondary color for accents */
-    --background-color: #F8F9FA; /* Background color for the body */
-    --text-color: #343A40; /* Main text color */
-    --heading-color: #212529; /* Color for headings */
-    --link-color: #007BFF; /* Color for links */
-    --link-hover-color: #0056b3; /* Hover color for links */
+    --primary-color: #007BFF; /* Primary color for headers and links (River Blue) */
+    --secondary-color: #FF5733; /* Secondary color for accents (Sunset Orange) */
+    --background-color: #A4D7E1; /* Background color for the body (Light Gray) */
+    --text-color: #343A40; /* Main text color (Dark Gray) */
+    --heading-color: #212529; /* Color for headings (Almost Black) */
+    --link-color: #007BFF; /* Color for links (River Blue) */
+    --link-hover-color: #dfe6ed; /* Hover color for links (Darker River Blue) */
+    --accent-color: #32CD32; /* Accent color for buttons (Lime Green) */
 }
 
 /* Global Styles */
@@ -66,11 +67,12 @@ nav ul li a {
     color: white; /* Link color */
     text-decoration: none; /* Remove underline */
     padding: 10px; /* Add padding for clickable area */
-    transition: background-color 0.3s ease; /* Smooth transition */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
 }
 
 nav ul li a:hover {
     background-color: var(--link-hover-color); /* Change background on hover */
+    transform: scale(1.05); /* Slightly enlarge the link */
 }
 
 /* Hero Section Styles */
@@ -113,12 +115,22 @@ nav ul li a:hover {
     padding: 20px; /* Padding for package */
     margin-bottom: 20px; /* Space between packages */
     text-align: center; /* Center text in trip package */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.trip-package:hover {
+    transform: translateY(-5px); /* Lift the package on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
 }
 
 .trip-package img {
-    width: 100%; /* Full width for images */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%; /* Full width for images height: auto; /* Maintain aspect ratio */
     border-radius: 8px; /* Rounded corners for images */
+    transition: transform 0.3s ease; /* Smooth transition for image */
+}
+
+.trip-package img:hover {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
 }
 
 /* Trip Table Styles */
@@ -135,15 +147,15 @@ nav ul li a:hover {
     border: 1px solid #ccc; /* Light border for table cells */
     padding: 10px; /* Padding for table cells */
     text-align: center; /* Center text in table cells */
+    transition: background-color 0.3s ease; /* Smooth transition */
 }
 
-.trip-table th {
-    background-color: var(--primary-color); /* Header background color */
-    color: white; /* Header text color */
+.trip-table th:hover {
+    background-color: var(--link-hover-color); /* Change background on hover */
+    color: white; /* Change text color on hover */
 }
 
-/* Call to Action ```css
- Styles */
+/* Call to Action Styles */
 .call-to-action {
     text-align: center; /* Center text */
     margin: 20px 0; /* Space above and below the section */
@@ -161,11 +173,12 @@ nav ul li a:hover {
     padding: 10px 20px; /* Padding for button */
     font-size: 1em; /* Font size for button text */
     cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s ease; /* Smooth transition */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
 }
 
 .call-to-action .cta-button:hover {
     background-color: darken(var(--secondary-color), 10%); /* Darken on hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
 }
 
 /* Footer Styles */
@@ -187,6 +200,11 @@ footer {
 .footer-social a {
     color: white; /* Social icon color */
     margin-left: 15px; /* Space between icons */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.footer-social a:hover {
+    transform: scale(1.1); /* Slightly enlarge social icons on hover */
 }
 
 /* Responsive Styles */
@@ -251,7 +269,7 @@ footer {
 @media (max-width: 480px) {
     .hero-text h1 {
         font-size: 1.5em; /* Even smaller heading on very small screens */
-    }
+ }
 
     .hero-text p {
         font-size: 0.9em; /* Smaller paragraph on very small screens */
