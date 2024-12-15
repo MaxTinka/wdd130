@@ -16,6 +16,7 @@ body {
     color: var(--text-color);
     margin: 0;
     padding: 0;
+    text-align: center; /* Center all text in the body */
 }
 
 /* Container to Limit Width */
@@ -75,7 +76,7 @@ nav ul li a:hover {
 /* Hero Section Styles */
 .hero {
     position: relative;
-    text-align: center;
+    text-align: center; /* Center text in hero section */
 }
 
 .hero-image {
@@ -111,7 +112,7 @@ nav ul li a:hover {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     padding: 20px; /* Padding for package */
     margin-bottom: 20px; /* Space between packages */
-    text-align: center; /* Center text */
+    text-align: center; /* Center text in trip package */
 }
 
 .trip-package img {
@@ -133,7 +134,7 @@ nav ul li a:hover {
 .trip-table th, .trip-table td {
     border: 1px solid #ccc; /* Light border for table cells */
     padding: 10px; /* Padding for table cells */
-    text-align: left; /* Align text to the left */
+    text-align: center; /* Center text in table cells */
 }
 
 .trip-table th {
@@ -141,59 +142,131 @@ nav ul li a:hover {
     color: white; /* Header text color */
 }
 
-/* Call to Action Styles */
+/* Call to Action ```css
+ Styles */
 .call-to-action {
     text-align: center; /* Center text */
     margin: 20px 0; /* Space above and below the section */
 }
 
 .call-to-action h2 {
-    color: var(--heading-color); /* Heading color */
-}
-
-.call-to-action p {
-    margin-bottom: 15px; /* Space below paragraph */
+    font-size: 2em; /* Font size for the call to action heading */
 }
 
 .call-to-action .cta-button {
-    background-color: var(--primary-color); /* Button background color */
+    background-color: var(--secondary-color); /* Button background color */
     color: white; /* Button text color */
-    padding: 10px 20px; /* Padding for button */
     border: none; /* Remove border */
-    border-radius: 4px; /* Rounded corners */
-    text-decoration: none; /* Remove underline */
-    display: inline-block; /* Make it a block element */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Padding for button */
+    font-size: 1em; /* Font size for button text */
+    cursor: pointer; /* Pointer cursor on hover */
     transition: background-color 0.3s ease; /* Smooth transition */
 }
 
 .call-to-action .cta-button:hover {
-    background-color: var(--link-hover-color); /* Change background on hover */
+    background-color: darken(var(--secondary-color), 10%); /* Darken on hover */
 }
 
 /* Footer Styles */
 footer {
-    display: flex; /* Use Flexbox for layout */
+    display: flex; /* Use Flexbox for footer layout */
     justify-content: space-between; /* Space between items */
     align-items: center; /* Center items vertically */
+    background-color: var(--primary-color);
+    color: white; /* Footer text color */
     padding: 20px; /* Padding for footer */
-    background-color: var(--primary-color); /* Background color for footer */
-    color: white; /* Text color for footer */
+    text-align: center; /* Center text in footer */
 }
 
 .footer-social {
-    display: flex; /* Use Flexbox for horizontal layout */
-    justify-content: flex-end; /* Align social icons to the right */
+    display: flex; /* Use Flexbox for social icons */
+    justify-content: center; /* Center social icons */
 }
 
 .footer-social a {
-    margin-left: 15px; /* Space between social icons */
+    color: white; /* Social icon color */
+    margin-left: 15px; /* Space between icons */
 }
 
-.footer-social img {
-    width: 30px; /* Set a fixed width for social media icons */
-    height: auto; /* Maintain aspect ratio */
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 15px; /* Reduce padding on medium screens */
+    }
+
+    header {
+        padding: 15px; /* Reduce padding in header */
+    }
+
+    .hero-text h1 {
+        font-size: 2.2em; /* Slightly smaller heading */
+    }
+
+    .hero-text p {
+        font-size: 1.1em; /* Slightly smaller paragraph */
+    }
+
+    .trip-package {
+        padding: 15px; /* Reduce padding for trip packages */
+    }
 }
 
-footer p {
-    margin: 0; /* Reset margin for footer text */
+@media (max-width: 768px) {
+    header {
+        grid-template-columns: 1fr; /* Stack logo and nav */
+        text-align: center; /* Center text */
+    }
+
+    nav {
+        justify-content: center; /* Center navigation items */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack navigation items vertically */
+    }
+
+    nav ul li {
+        margin-left: 0; /* Remove left margin */
+        margin-bottom: 10px; /* Add space between items */
+    }
+
+    .hero-text h1 {
+        font-size: 1.8em; /* Smaller heading on mobile */
+    }
+
+    .hero-text p {
+        font-size: 1em; /* Smaller paragraph on mobile */
+    }
+
+    .trip-package {
+        margin-bottom: 15px; /* Reduce space between packages */
+    }
+
+    .call-to-action .cta-button {
+        padding: 8px 16px; /* Adjust button padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 1.5em; /* Even smaller heading on very small screens */
+    }
+
+    .hero-text p {
+        font-size: 0.9em; /* Smaller paragraph on very small screens */
+    }
+
+    footer {
+        flex-direction: column; /* Stack footer items vertically */
+        align-items: center; /* Center items in footer */
+    }
+
+    .footer-social {
+        justify-content: center; /* Center social icons */
+    }
+
+    .footer-social a {
+        margin-left: 10px; /* Reduce space between social icons */
+    }
 }
